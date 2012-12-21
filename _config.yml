@@ -1,0 +1,7 @@
+---
+name: Bryan's Site
+description: Bryan's blog site
+safe: true
+pygments: true
+permalink: pretty
+lsi: false
