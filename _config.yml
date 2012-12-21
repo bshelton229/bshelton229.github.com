@@ -5,4 +5,7 @@ safe: false
 pygments: true
 permalink: pretty
 lsi: false
-exclude: Gemfile*, Rakefile, config.rb
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Rakefile
