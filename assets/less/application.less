@@ -1,5 +1,32 @@
 @import "bootstrap.less";
+@import "bootstrap-responsive.less";
 
-.bstest {
-  color: red;
+.navbar {
+  .navbar-inner {
+    padding: 0;
+  }
+  .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+  }
+  .nav li {
+    display: table-cell;
+    width: 1%;
+    float: none;
+  }
+  .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,.75);
+    border-right: 1px solid rgba(0,0,0,.1);
+  }
+  .nav li:first-child a {
+    border-left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+  }
 }
