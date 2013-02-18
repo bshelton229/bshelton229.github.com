@@ -1,3 +1,4 @@
+
 /*global module:false*/
 module.exports = function(grunt) {
 
@@ -19,8 +20,21 @@ module.exports = function(grunt) {
     uglify: {
       assets: {
         files: {
-          'application.js': '<%= pkg.assets.js %>'
+          'application.js': [
+            "assets/lib/bootstrap/js/bootstrap-button.js",
+            "assets/js/application.js"
+          ]
         }
+      }
+    },
+    watch: {
+      js: {
+        files: [ 'assets/js/**/*.js' ],
+        tasks: [ 'uglify' ]
+      },
+      less: {
+        files: [ 'assets/less/**/*.less' ],
+        tasks: [ 'less' ]
       }
     },
     jshint: {

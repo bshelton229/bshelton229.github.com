@@ -8,5 +8,4 @@ lsi: false
 exclude:
   - Gemfile
   - Gemfile.lock
-  - assets_src
   - node_modules

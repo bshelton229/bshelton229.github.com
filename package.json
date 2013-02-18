@@ -10,12 +10,6 @@
     "grunt-contrib-jshint": "0.1.1rc6",
     "grunt-contrib-uglify": "0.1.1rc6"
   },
-  "assets": {
-    "js": [
-      "assets/lib/bootstrap/js/bootstrap-button.js",
-      "assets/js/application.js"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/bshelton229/bshelton229.github.com.git"
