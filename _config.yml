@@ -1,6 +1,6 @@
 ---
-name: Bryan's Site
-description: Bryan's blog site
+name: Bryan Shelton
+description: Bryan Shelton
 safe: false
 pygments: true
 permalink: pretty
@@ -8,4 +8,5 @@ lsi: false
 exclude:
   - Gemfile
   - Gemfile.lock
-  - Rakefile
+  - assets_src
+  - node_modules
