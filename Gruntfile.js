@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     less: {
       assets: {
         options: {
-          paths: [ 'assets/less', 'assets/lib/bootstrap/less' ],
+          paths: [ 'assets/less', 'assets/lib' ],
           yuicompress: true
         },
         files: {
