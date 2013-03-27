@@ -2,6 +2,7 @@
 
 #### Develop ####
 
+* git submodule update --init
 * bundle install
 * npm install
 * npm install -g grunt-cli
