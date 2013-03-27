@@ -1,3 +1,4 @@
 $(function() {
-  // Code goes here
+  // Pjaxify the site
+  $(document).pjax('a', '#content', { fragment: '#content' });
 });
