@@ -21,6 +21,7 @@ module.exports = function(grunt) {
       assets: {
         files: {
           'application.js': [
+            "assets/js/highlight.pack.js",
             "assets/js/jquery.pjax.js",
             "assets/lib/bootstrap/js/bootstrap-button.js",
             "assets/js/application.js"

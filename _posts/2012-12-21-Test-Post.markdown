@@ -4,3 +4,9 @@ layout: post
 ### Test Post ##
 
 Testing out Jekyll
+
+    var a = 'test';
+    var b = function() {
+      console.log(a);
+    }
+    b();
