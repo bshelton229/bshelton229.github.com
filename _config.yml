@@ -9,3 +9,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+  - Gruntfile.js
+  - assets
