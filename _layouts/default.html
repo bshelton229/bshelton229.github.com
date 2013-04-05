@@ -2,19 +2,30 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/application.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <div id="content" class="container" >
-      <div id="main" class="span8">
-        <div>
+    <div id="content" class="container">
+      <div class="row-fluid">
+        <div id="main" class="span8">
           {{ content }}
         </div>
+
+        <div id="sidebar" class="span4">
+          <div class="branding">
+            <h1>{Bryan Shelton}</h1>
+            <h2>Web Developer</h2>
+            <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div id="sidebar" class="span2">
-        <img src="http://www.gravatar.com/avatar/e041154616172eae257d34280feb0f20" align="left" />
-        <h3><a href="/">Bryan Shelton</a></h3>
-      </div>    </div>
-  <script src="/application.js"></script>
-  </body>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/application.js"></script>
+</body>
 </html>
