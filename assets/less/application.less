@@ -1,6 +1,8 @@
 @import "bootstrap.less";
 @import "responsive.less";
 @import "styles/github.less";
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro:300,400,600);
+
 
 pre {
   margin: 0; font-size: medium;
@@ -30,9 +32,8 @@ body {
 }
 
 h1,h2 {
-  font-family: 'Share Tech Mono', sans-serif;
+  font-family: @monoFontFamily;
   font-weight: normal;
-  text-shadow: 2px 2px #c8c8c8;
   text-transform: uppercase;
 }
 h1 {
