@@ -5,53 +5,128 @@
 
 
 pre {
-  margin: 0; font-size: medium;
+  margin: 0; 
+  font-size: medium; 
 }
 
 body {
-  background: #f2f2f2;
-  color: #333;
-
+  color: @grayDarker;
+  padding: 50px 0;
 }
 
-#content,
-#sidebar {
-
+.sidebar {
+  border-left: 1px solid @neutral;
+  padding-left: 40px;
+  margin-left: 20px;
 }
 
-#content {
-  margin-top: 40px;
-}
-
-#sidebar {
-  border-left: 1px solid #CCC;
-  padding-left: 39px;
-}
 .branding {
   /*background:#CCC;*/
 }
 
-h1,h2 {
-  font-family: @monoFontFamily;
-  font-weight: normal;
-  text-transform: uppercase;
+h1, h2, h3, h4 {
+  line-height: 1.3em;
 }
+
+h1, h2 {
+  font-weight: 400;
+}
+
 h1 {
   color: #3367a0;
-  font-size: 52.5px;
-  line-height: 108%;
+  font-size: 52px;
+  font-size: @baseFontSize + 30;
   font-weight: bold;
 }
+
 h2 {
   color: #538cb7;
+  text-transform: uppercase;
 }
+
+h3, h4 {
+  font-weight: 600;
+}
+
+h3 {
+  color: @grayDark;
+}
+
+h4 {
+  color: @gray;
+}
+
+p {
+  margin: 0 0 7px 0;
+  font-weight: 400;
+  font-size: @baseFontSize;
+}
+
+// more elegant bullets
+li {
+  list-style: none;
+  background: url(/assets/img/bullet.png) no-repeat left 5px;
+  padding-left: 13px;
+  margin: 0 0 2px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px dashed @neutral;
+}
+
+tt, code, kbd, samp {
+  font-family: @monoFontFamily;
+}
+
 .entry {
   margin-bottom: 48px;
 }
+
 .date {
-  font-family: 'Abel', sans-serif;
-  font-size: 19px;
+  font-family: @monoFontFamily;
+  font-size: @baseFontSize +1;
 }
+
 .excerpt {
   margin-top: 12px;
 }
+
+//  css only drop shadow
+.drop-shadow {
+  position: relative;
+  height: 10px;
+  margin-top: -13px;
+  margin-bottom: 20px;
+  z-index: -10;
+}
+
+.drop-shadow:before,
+.drop-shadow:after{
+  content: "";
+  position: absolute;
+  bottom: 15px;
+  left: 5px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+  .box-shadow(0 15px 10px black);
+  .rotate(-3deg);
+}
+
+.drop-shadow:after{
+  right: 5px;
+  left: auto;
+  .rotate(3deg);
+}
+
+// image treatment
+// image treatment
+.polaroid{
+  padding: 15px;
+  border: 1px solid @grayLight;
+  .border-radius(2px);
+  background: white;
+  margin-bottom: 20px;
+}
+

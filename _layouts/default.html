@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="/application.css" />
-    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/application.css" />
+    <meta name="description" content="Bryan Shelton develops in a wide variety of programming languages and frameworks, always using the best tool for the job; including, but not limited to Ruby, Rails, and Node.js.">
+    <link href='/assets/ico/favicon.ico' rel='shortcut icon'>
+    <meta charset="utf-8">
   </head>
   <body>
-    <div id="content" class="container">
-      <div class="row-fluid">
-        <div id="main" class="span8">
-          {{ content }}
-        </div>
 
-        <div id="sidebar" class="span4">
-          <div class="branding">
-            <h1>{Bryan Shelton}</h1>
-            <h2>Web Developer</h2>
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
+    <div class="container">
+      <div class="row">
+
+        <div class="span4 pull-right">
+          <div class="sidebar">
+            <img src="/assets/img/tea.jpg" alt="Tea" class="polaroid">
+            <div class="drop-shadow"></div>
+            <div class="branding">
+              <hgroup>
+                <h1>Bryan Shelton</h1>
+                <h2>Web Developer</h2>
+              </hgroup>
+            </div><!-- branding -->
+            <ul class="nav">
+              <li><a href="/resume">Resumé</a></li>
             </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+          </div><!-- sidebar -->
+        </div><!--span4-->
+
+        <div class="span8">
+          {{ content }}
+        </div><!--span8-->
+
+      </div><!-- row -->
+    </div><!-- container -->
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/application.js"></script>
-</body>
+  </body>
 </html>
