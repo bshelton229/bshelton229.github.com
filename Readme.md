@@ -7,5 +7,7 @@
 * npm install
 * npm install -g grunt-cli
 * bundle exec jekyll --server --auto
-* bundle exec jekyll --server --no-auto (if using livereload)
 * grunt watch
+
+## Known Issues
+If using LiveReload, exclude _site (http://www.herda.me/blog/Using-Jekyll-With-LiveReload/index.html)
