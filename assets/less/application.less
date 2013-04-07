@@ -2,6 +2,7 @@
 @import "responsive.less";
 @import "styles/github.less";
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro:300,400,600);
+@import "font-awesome";
 
 
 pre {
@@ -14,18 +15,9 @@ body {
   padding: 50px 0;
 }
 
-.sidebar {
-  border-left: 1px solid @neutral;
-  padding-left: 40px;
-  margin-left: 20px;
-}
-
-.branding {
-  /*background:#CCC;*/
-}
-
 h1, h2, h3, h4 {
-  line-height: 1.3em;
+  line-height: 1.2em;
+  margin: 0;
 }
 
 h1, h2 {
@@ -33,27 +25,28 @@ h1, h2 {
 }
 
 h1 {
-  color: #3367a0;
+  color: @blue;
   font-size: 52px;
   font-size: @baseFontSize + 30;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 h2 {
-  color: #538cb7;
+  color: @green;
   text-transform: uppercase;
-}
-
-h3, h4 {
-  font-weight: 600;
+  a {
+    color: @green;
+  }
 }
 
 h3 {
-  color: @grayDark;
+  color: @grayLight;
+  font-weight: 200;
 }
 
 h4 {
   color: @gray;
+  font-weight: 400;
 }
 
 p {
@@ -62,12 +55,32 @@ p {
   font-size: @baseFontSize;
 }
 
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+article {
+  h2 {
+    margin-bottom: 5px;
+  }
+}
+
 // more elegant bullets
+// this and the <ul> really shouldn't be styled globally, but I want it to be applicable to the posts
+// (where you can't put classes on the markdown)
 li {
   list-style: none;
-  background: url(/assets/img/bullet.png) no-repeat left 5px;
-  padding-left: 13px;
+  background: url(/assets/img/bullet.png) no-repeat left 8px;
   margin: 0 0 2px 0;
+  padding-left: 12px;
+  font-size: @baseFontSize;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
 }
 
 hr {
@@ -79,13 +92,36 @@ tt, code, kbd, samp {
   font-family: @monoFontFamily;
 }
 
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+.sidebar {
+  border-left: 1px solid @neutral;
+  padding-left: 40px;
+  margin-left: 20px;
+}
+
 .entry {
   margin-bottom: 48px;
 }
 
 .date {
   font-family: @monoFontFamily;
-  font-size: @baseFontSize +1;
+  font-size: @baseFontSize - 2;
+  color: @gray;
+  padding: 4px;
+  margin: 7px 0;
+  background: @grayLighter;
+  .border-radius(4px);
+}
+
+.entry {
+  margin-top: 10px;
 }
 
 .excerpt {
@@ -96,7 +132,7 @@ tt, code, kbd, samp {
 .drop-shadow {
   position: relative;
   height: 10px;
-  margin-top: -13px;
+  margin-top: -33px;
   margin-bottom: 20px;
   z-index: -10;
 }
@@ -111,6 +147,7 @@ tt, code, kbd, samp {
   height: 20%;
   max-width: 300px;
   .box-shadow(0 15px 10px black);
+  .box-shadow(0 15px 10px rgba(0, 0, 0, .8));
   .rotate(-3deg);
 }
 
@@ -124,9 +161,72 @@ tt, code, kbd, samp {
 // image treatment
 .polaroid{
   padding: 15px;
-  border: 1px solid @grayLight;
+  border: 1px solid @neutral;
   .border-radius(2px);
   background: white;
   margin-bottom: 20px;
 }
 
+.branding {
+  padding-bottom: 10px;
+  border-bottom: 10px solid @grayLighter;
+  hgroup {
+    margin-bottom: 30px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: @baseFontSize + 17;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: @orange;
+  }
+  h2 {
+    font-size: @baseFontSize + 4;
+    text-transform: lowercase;
+    font-family: @monoFontFamily;
+    margin-top: -3px;
+    color: @gray;
+  }
+}
+
+.contact-list {
+  li {
+    display: inline;
+    background: none;
+    border-right: 1px solid @neutral;
+    padding-right: 10px;
+    margin-right: 7px;
+    padding-left: 0;
+    &:last-child {
+      border-right: none;
+    }
+  }
+  a {
+    color: @gray;
+    &:hover {
+      text-decoration: none;
+      color: @orange;
+    }
+  }
+}
+
+.resume {
+  margin-top: 5px;
+  border-top: solid @grayLighter 3px;
+  padding-top: 10px;
+}
+
+.location {
+  dt, dd {
+    display: inline;
+    color: @gray;
+    font-weight: 400;
+    margin: 0;
+  }
+}
+
+// fine tuning the position of this icon
+.icon-github-alt {
+  position: relative;
+  top: 1px;
+}
