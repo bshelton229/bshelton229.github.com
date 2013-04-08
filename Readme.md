@@ -10,4 +10,5 @@
 * grunt watch
 
 ## Known Issues
-If using LiveReload, exclude _site (http://www.herda.me/blog/Using-Jekyll-With-LiveReload/index.html)
+  * If using LiveReload, exclude _site (http://www.herda.me/blog/Using-Jekyll-With-LiveReload/index.html)
+  * Consider using the truncate filter for posts on the home page
