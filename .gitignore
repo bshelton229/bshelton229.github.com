@@ -2,3 +2,4 @@
 /node_modules
 /_site
 *.sublime-*
+.sass-cache
