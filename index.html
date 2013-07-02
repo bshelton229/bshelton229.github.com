@@ -1,15 +1,3 @@
 ---
 layout: default
 ---
-
-{% for post in site.posts %}
-<div class="post">
-  <article>
-    <h2><a title="Permanent Link to A quick update and screencast of the Mozilla HTML5 slide system" rel="bookmark" href="{{post.url}}">{{post.title}}</a></h2>
-    <span class="date">{{ post.date | date_to_string }} <!-- by Chris --></span class="date">
-    <div class="entry">
-      {{ post.content }}
-    </div>
-  </article>
-</div>
-{% endfor %}

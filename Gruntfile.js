@@ -13,7 +13,7 @@ module.exports = function(grunt) {
           yuicompress: true
         },
         files: {
-          'app.css': 'assets/sass/app.sass'
+          'application.css': 'assets/less/application.less'
         }
       }
     },
@@ -36,10 +36,6 @@ module.exports = function(grunt) {
       less: {
         files: [ 'assets/less/**/*.less' ],
         tasks: [ 'less' ]
-      }, 
-      sass: {
-        files: [ 'assets/sass/**/*.sass' ],
-        tasks: [ 'sass' ]
       }
     },
     jshint: {
