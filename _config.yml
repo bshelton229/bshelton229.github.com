@@ -6,7 +6,6 @@ pygments: true
 permalink: pretty
 lsi: false
 exclude:
-  - Gemfile
-  - Gemfile.lock
+  - Gemfile*
   - node_modules
   - Gruntfile.js
