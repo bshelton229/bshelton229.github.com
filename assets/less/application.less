@@ -22,12 +22,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: @typeface-size + 15;
+  font-size: @typeface-size + 20;
   margin: 0 0 7px 0;
+  color: @gray-light;
 }
 
 h2 {
-  color: @warm-accent;
+  color: @accent;
   border-top: 1px solid @neutral;
   padding-top: @content-padding;
   margin-top: @content-padding;
@@ -36,6 +37,7 @@ h2 {
 
 h3 {
   color: @cool-accent;
+  margin-top: @content-padding;
   small {
     display: block;
   }
@@ -64,7 +66,7 @@ hr {
 }
 
 .articles {
-  border-top: 1px dashed @neutral;
+  border-top: 1px dotted @neutral;
   padding-top: @content-padding;
   margin-top: @content-padding;
 }
@@ -199,5 +201,11 @@ hr {
 @media only screen and (max-width : 768px) {
   body {
     padding: 0;
+  }
+
+  .three-column-list {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
   }
 }
