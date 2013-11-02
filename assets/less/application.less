@@ -2,7 +2,7 @@
 @import "responsive.less";
 @import "font-awesome/font-awesome.less";
 @import "styles/github.less";
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro:300,400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700);
 @import "font-awesome";
 
 
@@ -12,31 +12,29 @@ pre {
 }
 
 body {
-  color: @grayDarker;
+  color: @gray;
   background-image:url('/assets/img/ticks.png');
-  // background-repeat:repeat;
   padding: 50px 0;
 }
 
 h1, h2, h3, h4 {
-  line-height: 1.2em;
+  line-height: 1.1em;
   margin: 0;
-}
-
-h1, h2 {
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1 {
   color: @blue;
   font-size: 52px;
   font-size: @baseFontSize + 30;
-  font-weight: 400;
 }
 
 h2 {
   color: @green;
   text-transform: uppercase;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dotted @neutral;
   a {
     color: @green;
   }
@@ -52,15 +50,20 @@ h4 {
   font-weight: 400;
 }
 
-.resume {
+.content-wrapper {
+  background: @pale-horse;
+  padding: 15px;
+  border-radius: 4px;
+
   h2 {
     text-transform: none;
   }
   h3 {
     small {
       display: block;
-      color: black;
+      color: #666;
       padding-bottom:10px;
+      margin-top: 3px;
     }
   }
 }
@@ -69,6 +72,8 @@ p {
   margin: 0 0 7px 0;
   font-weight: 400;
   font-size: @baseFontSize;
+  color: @gray;
+  line-height: 1.4em;
 }
 
 a {
@@ -117,9 +122,7 @@ figure {
 }
 
 .sidebar {
-  border-left: 1px solid @neutral;
-  padding-left: 40px;
-  margin-left: 20px;
+
 }
 
 .entry {
@@ -142,6 +145,10 @@ figure {
 
 .excerpt {
   margin-top: 12px;
+}
+
+.overview {
+  font-size: @baseFontSize + 3;
 }
 
 //  css only drop shadow
@@ -226,12 +233,6 @@ figure {
   }
 }
 
-.resume {
-  margin-top: 5px;
-  border-top: solid @grayLighter 3px;
-  padding-top: 10px;
-}
-
 .location {
   dt, dd {
     display: inline;
@@ -273,4 +274,6 @@ figure {
     padding: 0;
   }
 }
+
+
 
