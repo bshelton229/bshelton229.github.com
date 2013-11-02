@@ -9,33 +9,32 @@
     <title>Bryan Shelton{% if page.title %} | {{page.title}}{% endif %}</title>
   </head>
   <body>
-    <div class="container" id="content">
-      <div class="row">
-        <div class="span4 pull-right">
-          <div class="sidebar">
-            <figure class="polaroid hidden-phone">
-              <a href="/"><img src="/assets/img/bryan-shelton.jpg" alt="Tea"></a>
-            </figure>
-            <div class="drop-shadow hidden-phone"></div>
-            <div class="branding">
-              <hgroup>
-                <h1>Bryan Shelton</h1>
-                <h2>Web Developer</h2>
-              </hgroup>
-                <ul class="contact-list">
-                  <li><a href="https://github.com/bshelton229" target="_blank"><i class="icon-github-alt"></i></a>
-                  <li><a href="mailto:bryan@sheltonplace.com"><i class="icon-envelope-alt"></i></a></li>
-                  <li><a href="//www.linkedin.com/pub/bryan-shelton/21/1b8/11a/" target="_blank"><i class="icon-linkedin-sign"></i></a>
-                  <li><a href="https://twitter.com/bshelton229" target="_blank"><i class="icon-twitter"></i></a>
-                </ul>
-            </div>
-          </div>
-        </div>
-        <div class="span8">
-          {{ content }}
-        </div>
-      </div>
-    </div>
+
+
+    <div class="wrapper" id="content">
+
+      <div class="header">
+        <div class="contact-info">
+          <h1>Bryan Shelton</h1>
+          <h2>Web Developer</h2>
+          <ul class="icon-list">
+            <li><a href="https://github.com/bshelton229" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a href="mailto:bryan@sheltonplace.com"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="//www.linkedin.com/pub/bryan-shelton/21/1b8/11a/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/bshelton229" target="_blank"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div><!-- contact-info -->
+      </div><!-- header -->
+
+      <div class="content">
+        {{ content }}
+      </div><!-- content -->
+
+    </div><!-- container -->
+
+
+
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="/application.js"></script>
     <script>

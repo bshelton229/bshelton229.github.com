@@ -1,107 +1,30 @@
-@import "bootstrap.less";
-@import "responsive.less";
-@import "font-awesome/font-awesome.less";
-@import "styles/github.less";
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic|Source+Code+Pro:300,400,700);
-@import "font-awesome";
+@import "normalize";
+@import "variables";
+@import "styles/github";
+@import "font-awesome/font-awesome";
 
-
-pre {
-  margin: 0;
-  font-size: medium;
-}
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,700|Merriweather:300,300italic,400,400italic,700,700italic);
 
 body {
-  color: @gray;
-  background-image:url('/assets/img/ticks.png');
-  padding: 50px 0;
-}
-
-h1, h2, h3, h4 {
-  line-height: 1.1em;
-  margin: 0;
-  font-weight: 300;
-}
-
-h1 {
-  color: @blue;
-  font-size: 52px;
-  font-size: @baseFontSize + 30;
-}
-
-h2 {
-  color: @green;
-  text-transform: uppercase;
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px dotted @neutral;
-  a {
-    color: @green;
-  }
-}
-
-h3 {
-  color: @grayLight;
-  font-weight: 200;
-}
-
-h4 {
-  color: @gray;
-  font-weight: 400;
-}
-
-.content-wrapper {
-  background: @pale-horse;
-  padding: 15px;
-  border-radius: 4px;
-
-  h2 {
-    text-transform: none;
-  }
-  h3 {
-    small {
-      display: block;
-      color: #666;
-      padding-bottom:10px;
-      margin-top: 3px;
-    }
-  }
-}
-
-p {
-  margin: 0 0 7px 0;
-  font-weight: 400;
-  font-size: @baseFontSize;
-  color: @gray;
+  font-family: @typeface;
+  font-weight: @typeface-weight;
+  font-size: @typeface-size;
+  color: @dark;
   line-height: 1.4em;
+  background: @pale;
+  padding: 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: @typeface-weight;
 }
 
 a {
+  color: @warm-accent;
+  text-decoration: none;
   &:hover {
-    text-decoration: none;
+    border-bottom: 1px dotted @warm-accent;
   }
-}
-
-article {
-  h2 {
-    margin-bottom: 5px;
-  }
-}
-
-// more elegant bullets
-// this and the <ul> really shouldn't be styled globally, but I want it to be applicable to the posts
-// (where you can't put classes on the markdown)
-li {
-  list-style: none;
-  background: url(/assets/img/bullet.png) no-repeat left 8px;
-  margin: 0 0 2px 0;
-  padding-left: 12px;
-  font-size: @baseFontSize;
-}
-
-ul {
-  padding: 0;
-  margin: 0;
 }
 
 hr {
@@ -109,171 +32,72 @@ hr {
   border-top: 1px dashed @neutral;
 }
 
-tt, code, kbd, samp {
-  font-family: @monoFontFamily;
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  border-top: 7px #474748 solid;
+  border-bottom: 2px #474748 solid;
 }
 
-img {
-  max-width: 100%;
-}
-
-figure {
-  margin: 0;
-}
-
-.sidebar {
-
-}
-
-.entry {
-  margin-bottom: 48px;
-}
-
-.date {
-  font-family: @monoFontFamily;
-  font-size: @baseFontSize - 2;
-  color: @gray;
-  padding: 4px;
-  margin: 7px 0;
-  background: @grayLighter;
-  .border-radius(4px);
-}
-
-.entry {
-  margin-top: 10px;
-}
-
-.excerpt {
-  margin-top: 12px;
-}
-
-.overview {
-  font-size: @baseFontSize + 3;
-}
-
-//  css only drop shadow
-.drop-shadow {
+.header {
+  background: url(/assets/img/tea.jpg) no-repeat;
+  padding: @content-padding;
+  min-height: 400px;
+  border-bottom: 1px solid @dark;
   position: relative;
-  height: 10px;
-  margin-top: -33px;
-  margin-bottom: 20px;
-  z-index: -10;
 }
 
-.drop-shadow:before,
-.drop-shadow:after{
-  content: "";
+.contact-info {
   position: absolute;
-  bottom: 15px;
-  left: 5px;
-  width: 50%;
-  height: 20%;
-  max-width: 300px;
-  .box-shadow(0 15px 10px black);
-  .box-shadow(0 15px 10px rgba(0, 0, 0, .8));
-  .rotate(-3deg);
+  background: rgba(0, 0, 0, .8);
+  bottom: 0;
+  right: 0;
+  padding: 10px 25px;
 }
 
-.drop-shadow:after{
-  right: 5px;
-  left: auto;
-  .rotate(3deg);
-}
-
-// image treatment
-// image treatment
-.polaroid{
-  padding: 15px;
-  border: 1px solid @neutral;
-  .border-radius(2px);
+.content {
   background: white;
-  margin-bottom: 20px;
+  padding: @content-padding;
 }
 
-.branding {
-  padding-bottom: 10px;
-  // border-bottom: 10px solid @grayLighter;
-  hgroup {
-    margin-bottom: 30px;
-  }
-  h1 {
-    text-transform: uppercase;
-    font-size: @baseFontSize + 17;
-    font-weight: 400;
-    line-height: 1.2em;
-    color: @orange;
-  }
-  h2 {
-    font-size: @baseFontSize + 4;
-    text-transform: lowercase;
-    font-family: @monoFontFamily;
-    margin-top: -3px;
-    color: @gray;
-  }
-}
+.icon-list {
+  padding: 0;
 
-.contact-list {
+  i {
+    font-size: @typeface-size + 2;
+  }
+
   li {
-    display: inline;
-    background: none;
-    border-right: 1px solid @neutral;
-    padding-right: 10px;
-    margin-right: 7px;
-    padding-left: 0;
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
     &:last-child {
-      border-right: none;
+      margin-right: 0;
     }
   }
+
   a {
-    color: @gray;
+    color: @dark;
+    padding: 3px;
     &:hover {
-      text-decoration: none;
-      color: @orange;
+      background: @neutral;
+      border-radius: 3px;
     }
   }
 }
 
-.location {
-  dt, dd {
-    display: inline;
-    color: @gray;
-    font-weight: 400;
-    margin: 0;
+.three-column-list {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  padding: 0 10px 0 0;
+
+  li:nth-of-type(even) {
+    color: @gray-light;
   }
 }
 
-// fine tuning the position of this icon
-.icon-github-alt {
-  position: relative;
-  top: 1px;
+.no-bullets {
+  padding: 0;
+  list-style: none;
 }
-
-// responsive
-@media only screen and (max-width: 767px) {
-  .sidebar {
-    border: none;
-    border-bottom: 1px dotted @grayDark;
-    padding: 0 0 10px 0;
-    margin: 0 0 20px 0;
-  }
-
-  body {
-    padding: 15px;
-  }
-
-  .resume, .branding {
-    border: none;
-  }
-
-  .branding hgroup {
-    margin-bottom: 10px;
-  }
-
-  .resume {
-    margin: 0;
-    padding: 0;
-  }
-}
-
-
-
