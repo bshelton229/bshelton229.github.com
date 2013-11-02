@@ -10,13 +10,39 @@ body {
   font-weight: @typeface-weight;
   font-size: @typeface-size;
   color: @dark;
-  line-height: 1.4em;
+  line-height: 1.5em;
   background: @pale;
-  padding: 15px;
+  padding: @content-padding;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: @typeface-weight;
+  margin: 0 0 4px 0;
+}
+
+h1 {
+  font-size: @typeface-size + 15;
+  margin: 0 0 7px 0;
+}
+
+h2 {
+  color: @warm-accent;
+  border-top: 1px solid @neutral;
+  padding-top: @content-padding;
+  margin-top: @content-padding;
+  font-size: @typeface-size + 10;
+}
+
+h3 {
+  color: @cool-accent;
+  small {
+    display: block;
+  }
+}
+
+p {
+  margin: 0 0 7px 0;
 }
 
 a {
@@ -50,18 +76,36 @@ hr {
 .contact-info {
   position: absolute;
   background: rgba(0, 0, 0, .8);
+  width: 100%;
   bottom: 0;
-  right: 0;
-  padding: 10px 25px;
+  left: 0;
+
+  header {
+    float: left;
+    padding: @content-padding;
+  }
+
+  h2 {
+    color: @warm-accent;
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
 }
 
 .content {
   background: white;
   padding: @content-padding;
+  padding-top: 30px;
 }
 
 .icon-list {
-  padding: 0;
+  padding: 0 @content-padding;
+  float: right;
 
   i {
     font-size: @typeface-size + 2;
@@ -77,11 +121,12 @@ hr {
   }
 
   a {
-    color: @dark;
+    color: white;
+    color: rgba(255, 255, 255, .5);
     padding: 3px;
     &:hover {
-      background: @neutral;
-      border-radius: 3px;
+      color: white;
+      border: none;
     }
   }
 }
@@ -100,4 +145,19 @@ hr {
 .no-bullets {
   padding: 0;
   list-style: none;
+}
+
+.overview {
+  p {
+    font-size: @typeface-size + 2;
+  }
+}
+
+
+
+// responsive
+@media only screen and (max-width : 768px) {
+  body {
+    padding: 0;
+  }
 }
