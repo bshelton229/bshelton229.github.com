@@ -10,3 +10,8 @@ $(function() {
     });
   });
 });
+
+// http://calebjacob.com/tooltipster/#demos
+$(document).ready(function() {
+  $('.tooltip').tooltipster();
+});
