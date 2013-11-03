@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         files: {
           'application.js': [
             "assets/js/highlight.pack.js",
-            "assets/js/jquery.pjax.js",
+            "assets/js/jquery.tooltipster.min.js",
             "assets/js/application.js"
           ]
         }

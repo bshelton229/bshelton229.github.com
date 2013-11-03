@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Bryan Shelton{% if page.title %} | {{page.title}}{% endif %}</title>
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/application.css" />
     <meta name="description" content="Bryan Shelton develops in a wide variety of programming languages and frameworks, always using the best tool for the job; including, but not limited to Ruby, Rails, and Node.js.">
     <link href='/assets/ico/favicon.ico' rel='shortcut icon'>
     <meta charset="utf-8">
-    <title>Bryan Shelton{% if page.title %} | {{page.title}}{% endif %}</title>
   </head>
   <body>
-
-
     <div class="wrapper" id="content">
-
       <div class="header">
         <section class="contact-info">
           <header>
-            <h2>Bryan Shelton</h1>
-            <h3>Web Developer</h2>
+            <h2><a href="/">Bryan Shelton</a></h2>
+            <h3>Web Developer</h3>
           </header>
           <ul class="icon-list">
             <li>
@@ -30,26 +27,13 @@
               <a href="//www.linkedin.com/pub/bryan-shelton/21/1b8/11a/" target="_blank" class="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a>
             </li>
           </ul>
-          <section class="address">
-            <ul class="inline-list">
-              <li>Woodinville, WA</li>
-              <li><a href="mailto:bryan@sheltonplace.com">bryan@sheltonplace.com</a></li>
-            </ul>
-          </section>
         </section><!-- contact-info -->
       </div><!-- header -->
-
       <div class="content">
         {{ content }}
       </div><!-- content -->
-
     </div><!-- container -->
-
-
-
-
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/assets/js/jquery.tooltipster.min.js"></script>
     <script src="/application.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
