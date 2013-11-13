@@ -1,11 +1,5 @@
----
 name: Bryan Shelton
-description: Bryan Shelton
-safe: false
+markdown: redcarpet
 pygments: true
 permalink: pretty
-lsi: false
-exclude:
-  - Gemfile*
-  - node_modules
-  - Gruntfile.js
+exclude: [".gitignore", "CNAME", "LICENSE", "README.md", "Gruntfile.js", "package.json", "node_modules", "Gemfile*", "vendor"]

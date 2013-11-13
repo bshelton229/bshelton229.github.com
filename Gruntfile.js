@@ -8,55 +8,30 @@ module.exports = function(grunt) {
     less: {
       assets: {
         options: {
-          paths: [ 'assets/less', 'assets/lib' ],
           yuicompress: true
         },
         files: {
-          'application.css': 'assets/less/application.less'
+          'assets/css/app.css': '_assets/less/app.less'
         }
       }
     },
     uglify: {
       assets: {
         files: {
-          'application.js': [
-            "assets/js/highlight.pack.js",
-            "assets/js/jquery.tooltipster.min.js",
-            "assets/js/application.js"
+          'assets/js/app.js': [
+            '_assets/js/bootstrap.js'
           ]
         }
       }
     },
     watch: {
       js: {
-        files: [ 'assets/js/**/*.js' ],
+        files: [ '_assets/js/**/*.js' ],
         tasks: [ 'uglify' ]
       },
       less: {
-        files: [ 'assets/less/**/*.less' ],
+        files: [ '_assets/less/**/*.less' ],
         tasks: [ 'less' ]
-      }
-    },
-    jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        unused: true,
-        boss: true,
-        eqnull: true,
-        browser: true,
-        globals: {
-          jQuery: true
-        }
-      },
-      gruntfile: {
-        src: 'Gruntfile.js'
       }
     }
   });
@@ -69,5 +44,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-less');
 
   // Default task.
-  grunt.registerTask('default', ['jshint', 'less', 'uglify']);
+  grunt.registerTask('default', ['less', 'uglify']);
 };

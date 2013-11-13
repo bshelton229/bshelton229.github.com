@@ -1,0 +1,59 @@
+@import "bootstrap.less";
+@import "syntax.less";
+@import "font-awesome/font-awesome.less";
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f2f2f2;
+  margin-top:0px;
+  @media (min-width: @grid-float-breakpoint) {
+    margin-top:50px;
+  }
+}
+
+h1, h2, h3, h4 {
+  // font-family: 'Roboto Slab', serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+ul.inline {
+  list-style:none;
+  margin:0;
+  padding:0;
+  li {
+    display:inline;
+  }
+}
+
+.page-header {
+  margin: 0 0 22px;
+}
+
+.masthead {
+  h1 {
+    margin-bottom:0;
+  }
+  h3 {
+    margin-top:10px;
+    margin-bottom:8px;
+  }
+  img {
+    .box-shadow(0 10px 10px rgba(0,0,0,.5));
+  }
+}
+
+ul.media-links {
+  li {
+    padding-right:5px;
+    a {
+      color: black;
+      font-size: 36px;
+      &:hover {
+        color: @link-hover-color;
+      }
+      @media (min-width: @grid-float-breakpoint) {
+        font-size: 36px;
+      }
+    }
+  }
+}

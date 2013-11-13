@@ -1,6 +1,0 @@
----
-layout: post
-title: AWS Beanstalk and Node.JS
----
-
-Experience with node.js and beanstalk.

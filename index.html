@@ -3,12 +3,18 @@ layout: default
 title: Home
 ---
 
-<header>
+<!-- {% for post in site.posts %}
+  <h2><a href="{{ post.url }}">{{ post.title }} <small>{{ post.date | date_to_string }}</small></a></h2>
+  {{ post.content | split:'<!-- break -->' | first }}
+  <a href="{{ post.url }}">Read...</a>
+{% endfor %} -->
+
+<div class="page-header">
   <h1>About Me</h1>
-  <p>
-    I'm a developer specializing in Ruby and Rails, PHP, and Javascript. I've worked with a wide variety of open source web frameworks and projects; a few of which are:
-  </p>
-</header>
+</div>
+<p>
+  I'm a developer specializing in Ruby and Rails, PHP, and Javascript. I've worked with a wide variety of open source web frameworks and projects; a few of which are:
+</p>
 
 <ul class="three-column-list">
   <li>Ruby on Rails and Sinatra</li>

@@ -1,49 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bryan Shelton{% if page.title %} | {{page.title}}{% endif %}</title>
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/application.css" />
-    <meta name="description" content="Bryan Shelton develops in a wide variety of programming languages and frameworks, always using the best tool for the job; including, but not limited to Ruby, Rails, and Node.js.">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ site.name }}{% if page.title %} | {{ page.title }}{% endif %}</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.5' name='viewport'>
     <link href='/assets/ico/favicon.ico' rel='shortcut icon'>
-    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/assets/css/app.css">
   </head>
   <body>
-    <div class="wrapper" id="content">
-      <div class="header">
-        <section class="contact-info">
-          <header>
-            <h2><a href="/" class="sans-underline">Bryan Shelton</a></h2>
-            <h3>Web Developer</h3>
-          </header>
-          <ul class="icon-list">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-3 masthead">
+          <a href="/">
+            <img src="http://www.gravatar.com/avatar/adc0f62881992ce4a11732331e69a73a?s=200" class="img-rounded hidden-xs" />
+          </a>
+          <h1>Bryan Shelton</h1>
+          <h3>bshelton229</h3>
+          <ul class="inline media-links">
             <li>
-              <a href="https://github.com/bshelton229" target="_blank" class="tooltip" title="GitHub"><i class="fa fa-github"></i></a>
+              <a href="https://github.com/bshelton229" target="_blank"><i class="fa fa-github-square"></i></a>
             </li>
             <li>
-              <a href="https://twitter.com/bshelton229" target="_blank" class="tooltip" title="Twitter"><i class="fa fa-twitter"></i></a>
+              <a href="https://twitter.com/bshelton229"><i class="fa fa-twitter-square"></i></a>
             </li>
             <li>
-              <a href="//www.linkedin.com/pub/bryan-shelton/21/1b8/11a/" target="_blank" class="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a>
+              <a href="http://www.linkedin.com/pub/bryan-shelton/21/1b8/11a/"><i class="fa fa-linkedin-square"></i></a>
             </li>
           </ul>
-        </section><!-- contact-info -->
-      </div><!-- header -->
-      <div class="content">
-        {{ content }}
-      </div><!-- content -->
-    </div><!-- container -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="/application.js"></script>
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-42273943-1', 'sheltonplace.com');
-      ga('send', 'pageview');
-    </script>
+        </div>
+        <div class="col-xs-12 col-md-9">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/app.js"></script>
   </body>
 </html>
