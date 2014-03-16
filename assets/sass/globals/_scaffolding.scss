@@ -1,0 +1,92 @@
+body {
+  position: relative;
+  background: $pale-horse;
+  line-height: 1.4em;
+  color: $mud;
+  font: {
+    family: $alpha-typeface;
+    weight: 300;
+  };
+}
+
+img {
+  max-width: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 1px $neutral solid;
+  margin: 9px 0 10px 0;
+  height: 1px;
+}
+
+// main containers
+.container {
+  max-width: $max-page-width;
+  background: $pale-horse;
+  margin: 0 auto;
+  position: relative;
+  @media only screen and (min-width: $max-page-width) {
+    border-left: 1px solid $neutral;
+    border-right: 1px solid $neutral;
+  }
+}
+
+// wrappers and sections
+.wrapper {
+  @include outer-container;
+  padding: 0 2em;
+  @include break($baby-bear) {
+    padding: 0 1em;
+  }
+}
+
+.section-padding {
+  padding: 50px 0;
+  @include break($baby-bear) {
+    padding: 30px 0;
+  }
+}
+
+.section-alt {
+  background: white;
+}
+
+section {
+  @extend .section-padding;
+  &:nth-child(even) {
+    @extend .section-alt;
+  }
+}
+
+section.header {
+  padding-top: 100px;
+}
+
+// nav
+.main-nav {
+  position: fixed;
+  background: $mocha;
+  width: 100%;
+  a {
+    color: lighten($mocha, 30%);
+    &:hover {
+      color: lighten($mocha, 50%);
+    }
+  }
+  ul {
+    float: right;
+  }
+}
+
+ul.unstyled {
+  list-style:none;
+  padding-left:0px;
+}
+
+.logo {
+  float: left;
+  line-height: 1em;
+  font-size: 1.7rem;
+  padding-top: 11px;
+}

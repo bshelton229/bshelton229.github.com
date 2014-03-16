@@ -1,0 +1,33 @@
+// colors
+$pale-horse: #efefef;
+$charcoal: #423f40;
+$neutral: #cccccc;
+
+$mud: #746e62;
+$lime: #b1bb36;
+$poppy: #f26322;
+$dirt: #6e5d4d;
+$water: #69bad7;
+$mocha: #484643;
+
+// responsive
+$mordu: 1400px;
+$papa-bear: 1199px;
+$mama-bear: 979px;
+$baby-bear: 767px;
+
+@mixin break($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+// misc
+$hero-height: 400px;
+$max-page-width: 1920px;
+
+// type
+$alpha-typeface: "Merriweather", serif;
+$beta-typeface: "Source Sans Pro", sans-serif;
+
+$link-color: $poppy;

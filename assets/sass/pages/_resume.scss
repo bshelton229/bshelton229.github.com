@@ -1,0 +1,42 @@
+// main contact info
+.contact-info {
+  list-style: none;
+  margin: 0;
+  padding: 1em 0;
+  display: inline-block;
+  li {
+    float: left;
+    border-right: 1px dotted $neutral;
+    padding-right: 0.5em;
+    margin-right: 0.5em;
+    &:last-child {
+      margin-right: 0;
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+}
+
+// skills-list
+.skills-list {
+  @extend .alt-list;
+  margin-top: 1em;
+  padding-top: 1em;
+  border-top: 1px dotted $neutral;
+}
+
+//work history
+section.work-history {
+  article {
+    border-top: 1px dashed $neutral;
+    margin-top: 2em;
+    padding-top: 2em;
+  }
+}
+
+// header
+h1.resume {
+  border: 1px solid $neutral;
+  padding: 0.2em;
+  border-radius: 0.1em;
+}
